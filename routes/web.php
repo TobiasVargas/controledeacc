@@ -19,9 +19,15 @@ Route::get('/', function(){
 	return view('index');
 });
 
-Route::get('/horas', function(){
+Route::post('/horas/add/{id}', 'AccController@addHoras');
+
+/*Route::get('/horas', function(){
 	return view('acc.tabela');
-});
+});*/
+
+//Route::get('/horas', 'AccController@index');
+
+Route::resource('horas', 'AccController');
 
 Route::get('/horas/new', function(){
 	return view('acc.create');
