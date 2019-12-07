@@ -23,6 +23,10 @@ Route::get('/horas', function(){
 	return view('acc.tabela');
 });
 
+Route::get('/horas/new', function(){
+	return view('acc.create');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

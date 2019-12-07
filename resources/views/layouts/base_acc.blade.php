@@ -3,9 +3,9 @@
 <head>
 	<title>Cadastro de ACC</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-grid.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-reboot.min.css')}}">
 	<style type="text/css">
 		td, th{
 			text-align: center;
@@ -34,7 +34,7 @@
 				</ul>
 			</div>
 		</nav>
-		<h4 class="text-center pt-2">Tabela de Horas</h4>
+		
 		<!--abri o formulario de cadastro de uma acc
 			
 			Nome da ACC
@@ -44,17 +44,14 @@
 
 		-->
 		<div id="tabela">
-			<div class="pb-2">
-				<button class="btn btn-secondary">Nova ACC</button>
-			</div>
 
 			@yield('conteudo')
 
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
