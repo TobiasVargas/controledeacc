@@ -49,8 +49,18 @@
 			</td>
 		</tr>
 		@endforeach
+		<tr>
+			<th>Horas válidas*</th>
+			<td>
+				{{$horas_validas}}
+			</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
 	</tbody>
 </table>
+*São as horas permitidas dentro do limite de acordo com cada tipo de ACC
 @else
 <div class="text-center">
 	<span>Nenhuma ACC Cadastrada!</span>

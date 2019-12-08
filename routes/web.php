@@ -11,28 +11,13 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', function(){
 	return view('index');
 });
-
-Route::post('/horas/add/{id}', 'AccController@addHoras');
-
-/*Route::get('/horas', function(){
-	return view('acc.tabela');
-});*/
-
-//Route::get('/horas', 'AccController@index');
-
-Route::resource('horas', 'AccController');
-
+Route::post('/horas/add/{id}', 'AccController@addHoras')->middleware('auth');
+Route::resource('horas', 'AccController')->middleware('auth');
 Route::get('/horas/new', function(){
 	return view('acc.create');
-});
-
+})->middleware('auth');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

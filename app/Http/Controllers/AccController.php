@@ -18,7 +18,17 @@ class AccController extends Controller
     {
         $idUsuario = Auth::user()->id;
         $accs = User::find($idUsuario)->accs;
-        return view('acc.tabela', compact('accs'));
+        $horas_validas = 0;
+        
+        foreach ($accs as $acc) {
+            if ($acc->horas >= $acc->limiteHoras) {
+                $horas_validas = $horas_validas + $acc->limiteHoras;
+            }else{
+                $horas_validas = $horas_validas + $acc->horas;
+            }
+        }
+
+        return view('acc.tabela', compact('accs', 'horas_validas'));
     }
 
     /**

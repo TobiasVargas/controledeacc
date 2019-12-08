@@ -15,6 +15,9 @@
 </div>
 <div class="text-center">
 	<img src="img/home.svg" style="height: 300px; width: 300px;">
+	<p>
+		Neste sistema é possível gerenciar suas horas de Atividades Complementares de Curso
+	</p>
 </div>
 
 @endsection
