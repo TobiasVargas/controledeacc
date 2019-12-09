@@ -17,5 +17,13 @@ class DatabaseSeeder extends Seeder
             'email' =>'admin@gmail.com',
             'password' => bcrypt('12345678'),
         ]);
+
+        DB::table('accs')->insert([
+            'nome' => 'Estágios',
+            'limiteHoras' =>'100',
+            'horas' => '180',
+            'user_id' => '1'
+        ]);
+
     }
 }
